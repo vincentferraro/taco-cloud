@@ -1,4 +1,4 @@
-package taco.com.tacocloud;
+package taco.com.tacocloud.controller;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,7 +18,6 @@ import taco.com.tacocloud.tacos.Ingredient.Type;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 
 
@@ -70,7 +69,7 @@ public class DesignTacoController {
         tacoOrder.addTaco(taco);
         log.info("Processing info : {}", taco);
         
-        return "redirect:orders/current";
+        return "redirect:/orders/current";
     }
     
 
