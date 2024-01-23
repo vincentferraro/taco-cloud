@@ -3,11 +3,9 @@ package taco.com.tacocloud.data;
 import taco.com.tacocloud.tacos.Ingredient;
 import java.util.Optional;
 
-public interface IngredientRepository {
-    Iterable<Ingredient> findAll();
+import org.springframework.data.repository.CrudRepository;
 
-    Optional<Ingredient> findById(String id);
 
-    Ingredient save(Ingredient ingredient);
+public interface IngredientRepository extends CrudRepository<Ingredient,String> {
     
 }

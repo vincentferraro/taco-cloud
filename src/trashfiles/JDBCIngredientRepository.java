@@ -1,4 +1,4 @@
-package taco.com.tacocloud.data;
+package taco.com.tacocloud.trashfiles;
 
 
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.util.Optional;
 import java.util.List;
 
+import taco.com.tacocloud.data.IngredientRepository;
 import taco.com.tacocloud.tacos.Ingredient;
 
 @Repository
