@@ -1,27 +1,23 @@
 package taco.com.tacocloud.models;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
-import org.springframework.data.relational.core.mapping.Table;
-
-import org.springframework.data.domain.Persistable;
-
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Table("ingredient")
+@Entity
+@AllArgsConstructor
 @NoArgsConstructor(access=AccessLevel.PRIVATE, force=true)
-public class Ingredient implements Persistable<String>{
+public class Ingredient {
     
     @Id
     private final String id;
 
-    @Column("name")
     private final String name;
     
-    @Column("type")
     private final Type type;
 
     public enum Type{
