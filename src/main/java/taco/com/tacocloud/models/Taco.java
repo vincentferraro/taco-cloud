@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
 import javax.persistence.ManyToMany;
 
 import java.util.Date;
@@ -14,13 +14,13 @@ import jakarta.persistence.Entity;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
-
+import javax.persistence.Id;
 
 @Data
-@Entity
+// @Entity
 public class Taco {
     
-    @Id
+    @Id    
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 

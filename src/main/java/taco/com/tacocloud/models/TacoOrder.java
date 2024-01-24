@@ -17,7 +17,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.CascadeType;
 
 @Data
-@Entity
+// @Entity
 public class TacoOrder implements Serializable {
     
     private static final long serialVersionUID = 1L;

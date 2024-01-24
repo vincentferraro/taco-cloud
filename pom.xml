@@ -62,7 +62,10 @@
           <artifactId>h2</artifactId>
           <scope>runtime</scope>
         </dependency>
-		<dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-data-jpa</artifactId> <exclusions>
+		<dependency> 
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		<exclusions>
     	<exclusion>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-core</artifactId>
@@ -72,6 +75,10 @@
 <dependency>
 <groupId>org.eclipse.persistence</groupId> <artifactId>org.eclipse.persistence.jpa</artifactId> <version>2.7.6</version>
 </dependency>
+<dependency>
+<groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+
 		
 	</dependencies>
 

@@ -1,4 +1,4 @@
-package taco.com.tacocloud;
+package taco.com.tacocloud.functions;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,7 +7,7 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
 import taco.com.tacocloud.data.IngredientRepository;
-import taco.com.tacocloud.tacos.Ingredient;
+import taco.com.tacocloud.models.Ingredient;
 
 @Component
 public class IngredientByIdConverter implements Converter<String,Ingredient> {
