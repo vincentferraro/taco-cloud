@@ -1,4 +1,4 @@
-package taco.com.tacocloud.data;
+package taco.com.tacocloud.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 

@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import lombok.extern.slf4j.Slf4j;
-import taco.com.tacocloud.data.IngredientRepository;
 import taco.com.tacocloud.models.Ingredient;
 import taco.com.tacocloud.models.Taco;
 import taco.com.tacocloud.models.TacoOrder;
 import taco.com.tacocloud.models.Ingredient.Type;
+import taco.com.tacocloud.repositories.IngredientRepository;
 
 import org.springframework.web.bind.annotation.SessionAttributes;
 

@@ -9,13 +9,13 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-import taco.com.tacocloud.data.UserRepository;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 
 import taco.com.tacocloud.models.User;
+import taco.com.tacocloud.repositories.UserRepository;
+
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 @Configuration
 @EnableGlobalMethodSecurity

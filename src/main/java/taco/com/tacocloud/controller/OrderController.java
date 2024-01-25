@@ -10,8 +10,6 @@ import org.springframework.validation.Errors;
 
 import lombok.extern.slf4j.Slf4j;
 import taco.com.tacocloud.configuration.OrderProps;
-import taco.com.tacocloud.data.OrderRepository;
-import taco.com.tacocloud.data.UserRepository;
 import taco.com.tacocloud.models.TacoOrder;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +24,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import taco.com.tacocloud.models.User;
+import taco.com.tacocloud.repositories.OrderRepository;
+import taco.com.tacocloud.repositories.UserRepository;
+
 import org.springframework.web.bind.annotation.RequestParam;
 
 import org.springframework.ui.Model;

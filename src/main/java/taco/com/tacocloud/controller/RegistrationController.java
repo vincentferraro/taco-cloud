@@ -2,9 +2,8 @@ package taco.com.tacocloud.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import taco.com.tacocloud.data.UserRepository;
 import taco.com.tacocloud.functions.RegistrationForm;
-
+import taco.com.tacocloud.repositories.UserRepository;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
