@@ -13,6 +13,9 @@ import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.security.access.prepost.PostAuthorize;
+
+import jakarta.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.CascadeType;
 
@@ -47,9 +50,17 @@ public class TacoOrder implements Serializable {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Taco> tacos = new ArrayList<>();
 
+    @ManyToOne
+    private User user;
+
     public void addTaco(Taco taco){
         this.tacos.add(taco);
     }
 
+    
+    // @PostAuthorize("hasRole('ADMIN') || " + "returnObject.user.username == authentication.name")
+    // public TacoOrder getOrder(long id) {
+    //   //...
+    // }
     // GETTERS AND SETTERS with Lambo
 }

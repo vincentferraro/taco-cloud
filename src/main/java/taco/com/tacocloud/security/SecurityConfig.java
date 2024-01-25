@@ -16,8 +16,9 @@ import java.util.List;
 import java.util.ArrayList;
 
 import taco.com.tacocloud.models.User;
-
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 @Configuration
+@EnableGlobalMethodSecurity
 public class SecurityConfig {
     
 
@@ -40,7 +41,9 @@ public class SecurityConfig {
         return http.authorizeRequests()
         .antMatchers("/design", "/orders").access("hasRole('USER')")
         .antMatchers("/", "/**").access("permitAll()")
-        .and().formLogin().loginPage("/login") // Call login page "login.html"
+        .and().formLogin().loginPage("/login").loginProcessingUrl("/authenticate")
+        .usernameParameter("user")
+        .passwordParameter("pwd") // Call login page "login.html"
         .and().build(); }
 
 
